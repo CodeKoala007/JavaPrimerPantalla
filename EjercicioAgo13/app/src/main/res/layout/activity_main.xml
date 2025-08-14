@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    tools:context=".MainActivity">
+
+  <androidx.core.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      android:fillViewport="true"
+      android:clipToPadding="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="32dp">
+
+      <androidx.constraintlayout.widget.Guideline
+          android:id="@+id/guidelineCenter"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          app:layout_constraintGuide_percent="0.50"/>
+
+      <TextView
+          android:id="@+id/IdTxvTitulo"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="Datos Personales"
+          android:textAlignment="center"
+          android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          android:layout_marginTop="16dp"/>
+
+      <EditText
+          android:id="@+id/IdEdtNombre"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:hint="Nombre"
+          app:layout_constraintTop_toBottomOf="@id/IdTxvTitulo"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toStartOf="@id/guidelineCenter"
+          android:layout_marginTop="16dp"
+          android:layout_marginStart="16dp"
+          android:layout_marginEnd="8dp"/>
+
+      <TextView
+          android:id="@+id/txvOutNombre"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="—"
+          app:layout_constraintTop_toTopOf="@id/IdEdtNombre"
+          app:layout_constraintBottom_toBottomOf="@id/IdEdtNombre"
+          app:layout_constraintStart_toEndOf="@id/guidelineCenter"
+          app:layout_constraintEnd_toEndOf="parent"
+          android:layout_marginStart="8dp"
+          android:layout_marginEnd="16dp"/>
+
+      <EditText
+          android:id="@+id/IdEdtApellido"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:hint="Apellido"
+          app:layout_constraintTop_toBottomOf="@id/IdEdtNombre"
+          app:layout_constraintStart_toStartOf="@id/IdEdtNombre"
+          app:layout_constraintEnd_toEndOf="@id/IdEdtNombre"/>
+
+      <TextView
+          android:id="@+id/txvOutApellido"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="—"
+          app:layout_constraintTop_toTopOf="@id/IdEdtApellido"
+          app:layout_constraintBottom_toBottomOf="@id/IdEdtApellido"
+          app:layout_constraintStart_toEndOf="@id/guidelineCenter"
+          app:layout_constraintEnd_toEndOf="parent"
+          android:layout_marginStart="8dp"
+          android:layout_marginEnd="16dp"/>
+
+      <EditText
+          android:id="@+id/IdEdtFechaDeNacimiento"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:hint="Fecha de nacimiento"
+          app:layout_constraintTop_toBottomOf="@id/IdEdtApellido"
+          app:layout_constraintStart_toStartOf="@id/IdEdtApellido"
+          app:layout_constraintEnd_toEndOf="@id/IdEdtApellido"/>
+
+      <TextView
+          android:id="@+id/txvOutFechaDeNacimiento"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="—"
+          app:layout_constraintTop_toTopOf="@id/IdEdtFechaDeNacimiento"
+          app:layout_constraintBottom_toBottomOf="@id/IdEdtFechaDeNacimiento"
+          app:layout_constraintStart_toEndOf="@id/guidelineCenter"
+          app:layout_constraintEnd_toEndOf="parent"
+          android:layout_marginStart="8dp"
+          android:layout_marginEnd="16dp"/>
+
+      <EditText
+          android:id="@+id/IdEdtGenero"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:hint="Género"
+          app:layout_constraintTop_toBottomOf="@id/IdEdtFechaDeNacimiento"
+          app:layout_constraintStart_toStartOf="@id/IdEdtFechaDeNacimiento"
+          app:layout_constraintEnd_toEndOf="@id/IdEdtFechaDeNacimiento"/>
+
+      <TextView
+          android:id="@+id/txvOutGenero"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="—"
+          app:layout_constraintTop_toTopOf="@id/IdEdtGenero"
+          app:layout_constraintBottom_toBottomOf="@id/IdEdtGenero"
+          app:layout_constraintStart_toEndOf="@id/guidelineCenter"
+          app:layout_constraintEnd_toEndOf="parent"
+          android:layout_marginStart="8dp"
+          android:layout_marginEnd="16dp"/>
+
+      <EditText
+          android:id="@+id/IdEdtNumeroDocumento"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:hint="Número de documento"
+          app:layout_constraintTop_toBottomOf="@id/IdEdtGenero"
+          app:layout_constraintStart_toStartOf="@id/IdEdtGenero"
+          app:layout_constraintEnd_toEndOf="@id/IdEdtGenero"/>
+
+      <TextView
+          android:id="@+id/txvOutNumeroDocumento"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="—"
+          app:layout_constraintTop_toTopOf="@id/IdEdtNumeroDocumento"
+          app:layout_constraintBottom_toBottomOf="@id/IdEdtNumeroDocumento"
+          app:layout_constraintStart_toEndOf="@id/guidelineCenter"
+          app:layout_constraintEnd_toEndOf="parent"
+          android:layout_marginStart="8dp"
+          android:layout_marginEnd="16dp"/>
+
+      <EditText
+          android:id="@+id/IdEdtCorreo"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:hint="Correo"
+          app:layout_constraintTop_toBottomOf="@id/IdEdtNumeroDocumento"
+          app:layout_constraintStart_toStartOf="@id/IdEdtNumeroDocumento"
+          app:layout_constraintEnd_toEndOf="@id/IdEdtNumeroDocumento"/>
+
+      <TextView
+          android:id="@+id/txvOutCorreo"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="—"
+          app:layout_constraintTop_toTopOf="@id/IdEdtCorreo"
+          app:layout_constraintBottom_toBottomOf="@id/IdEdtCorreo"
+          app:layout_constraintStart_toEndOf="@id/guidelineCenter"
+          app:layout_constraintEnd_toEndOf="parent"
+          android:layout_marginStart="8dp"
+          android:layout_marginEnd="16dp"/>
+
+      <EditText
+          android:id="@+id/IdEdtTelefono"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:hint="Teléfono"
+          app:layout_constraintTop_toBottomOf="@id/IdEdtCorreo"
+          app:layout_constraintStart_toStartOf="@id/IdEdtCorreo"
+          app:layout_constraintEnd_toEndOf="@id/IdEdtCorreo"/>
+
+      <TextView
+          android:id="@+id/txvOutTelefono"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="—"
+          app:layout_constraintTop_toTopOf="@id/IdEdtTelefono"
+          app:layout_constraintBottom_toBottomOf="@id/IdEdtTelefono"
+          app:layout_constraintStart_toEndOf="@id/guidelineCenter"
+          app:layout_constraintEnd_toEndOf="parent"
+          android:layout_marginStart="8dp"
+          android:layout_marginEnd="16dp"/>
+
+      <EditText
+          android:id="@+id/IdEdtCiudad"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:hint="Ciudad"
+          app:layout_constraintTop_toBottomOf="@id/IdEdtTelefono"
+          app:layout_constraintStart_toStartOf="@id/IdEdtTelefono"
+          app:layout_constraintEnd_toEndOf="@id/IdEdtTelefono"/>
+
+      <TextView
+          android:id="@+id/txvOutCiudad"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="—"
+          app:layout_constraintTop_toTopOf="@id/IdEdtCiudad"
+          app:layout_constraintBottom_toBottomOf="@id/IdEdtCiudad"
+          app:layout_constraintStart_toEndOf="@id/guidelineCenter"
+          app:layout_constraintEnd_toEndOf="parent"
+          android:layout_marginStart="8dp"
+          android:layout_marginEnd="16dp"/>
+
+      <EditText
+          android:id="@+id/IdEdtProfesion"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:hint="Profesión"
+          app:layout_constraintTop_toBottomOf="@id/IdEdtCiudad"
+          app:layout_constraintStart_toStartOf="@id/IdEdtCiudad"
+          app:layout_constraintEnd_toEndOf="@id/IdEdtCiudad"/>
+
+      <TextView
+          android:id="@+id/txvOutProfesion"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="—"
+          app:layout_constraintTop_toTopOf="@id/IdEdtProfesion"
+          app:layout_constraintBottom_toBottomOf="@id/IdEdtProfesion"
+          app:layout_constraintStart_toEndOf="@id/guidelineCenter"
+          app:layout_constraintEnd_toEndOf="parent"
+          android:layout_marginStart="8dp"
+          android:layout_marginEnd="16dp"/>
+
+      <EditText
+          android:id="@+id/IdEdtNivelEstudio"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:hint="Nivel de estudio"
+          app:layout_constraintTop_toBottomOf="@id/IdEdtProfesion"
+          app:layout_constraintStart_toStartOf="@id/IdEdtProfesion"
+          app:layout_constraintEnd_toEndOf="@id/IdEdtProfesion"/>
+
+      <TextView
+          android:id="@+id/txvOutEstudios"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="—"
+          app:layout_constraintTop_toTopOf="@id/IdEdtNivelEstudio"
+          app:layout_constraintBottom_toBottomOf="@id/IdEdtNivelEstudio"
+          app:layout_constraintStart_toEndOf="@id/guidelineCenter"
+          app:layout_constraintEnd_toEndOf="parent"
+          android:layout_marginStart="8dp"
+          android:layout_marginEnd="16dp"/>
+
+      <Button
+          android:id="@+id/IdBtnEliminar"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="Eliminar"
+          app:layout_constraintTop_toBottomOf="@id/IdEdtNivelEstudio"
+          app:layout_constraintStart_toStartOf="@id/IdEdtNivelEstudio"
+          app:layout_constraintEnd_toStartOf="@id/IdBtnConsultar"
+          app:layout_constraintHorizontal_chainStyle="spread"
+          android:layout_marginTop="32dp"
+          android:layout_marginStart="16dp"
+          android:layout_marginEnd="8dp"/>
+
+      <Button
+          android:id="@+id/IdBtnConsultar"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="Consultar"
+          app:layout_constraintTop_toBottomOf="@id/IdEdtNivelEstudio"
+          app:layout_constraintStart_toEndOf="@id/IdBtnEliminar"
+          app:layout_constraintEnd_toEndOf="@id/IdEdtNivelEstudio"
+          android:layout_marginTop="32dp"
+          android:layout_marginStart="8dp"
+          android:layout_marginEnd="16dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
