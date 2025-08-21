@@ -5,7 +5,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -27,11 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setupButtons();
-        ViewCompat.setOnApplyWindowInsetsListener(binding.getRoot(), (v, insets) -> {
-            Insets bars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(bars.left, bars.top, bars.right, bars.bottom);
-            return insets;
-        });
+        applyWindowInsets();
     }
 
     private void setupButtons() {
@@ -139,6 +134,17 @@ public class MainActivity extends AppCompatActivity {
 
         // opcional: devolver foco
         binding.IdEdtNombre.requestFocus();
+    }
+    
+    /**
+     * Applies window insets to provide proper padding around the UI elements
+     */
+    private void applyWindowInsets() {
+        ViewCompat.setOnApplyWindowInsetsListener(binding.getRoot(), (v, insets) -> {
+            Insets bars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(bars.left, bars.top, bars.right, bars.bottom);
+            return insets;
+        });
     }
     
 }

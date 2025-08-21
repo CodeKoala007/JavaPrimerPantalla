@@ -46,6 +46,7 @@
           android:layout_width="0dp"
           android:layout_height="wrap_content"
           android:hint="Nombre"
+          android:inputType="textPersonName"
           app:layout_constraintTop_toBottomOf="@id/IdTxvTitulo"
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintEnd_toStartOf="@id/guidelineCenter"
@@ -70,6 +71,7 @@
           android:layout_width="0dp"
           android:layout_height="wrap_content"
           android:hint="Apellido"
+          android:inputType="textPersonName"
           app:layout_constraintTop_toBottomOf="@id/IdEdtNombre"
           app:layout_constraintStart_toStartOf="@id/IdEdtNombre"
           app:layout_constraintEnd_toEndOf="@id/IdEdtNombre"/>
@@ -91,6 +93,7 @@
           android:layout_width="0dp"
           android:layout_height="wrap_content"
           android:hint="Fecha de nacimiento"
+          android:inputType="date"
           app:layout_constraintTop_toBottomOf="@id/IdEdtApellido"
           app:layout_constraintStart_toStartOf="@id/IdEdtApellido"
           app:layout_constraintEnd_toEndOf="@id/IdEdtApellido"/>
@@ -112,6 +115,7 @@
           android:layout_width="0dp"
           android:layout_height="wrap_content"
           android:hint="Género"
+          android:inputType="text"
           app:layout_constraintTop_toBottomOf="@id/IdEdtFechaDeNacimiento"
           app:layout_constraintStart_toStartOf="@id/IdEdtFechaDeNacimiento"
           app:layout_constraintEnd_toEndOf="@id/IdEdtFechaDeNacimiento"/>
@@ -133,6 +137,7 @@
           android:layout_width="0dp"
           android:layout_height="wrap_content"
           android:hint="Número de documento"
+          android:inputType="number"
           app:layout_constraintTop_toBottomOf="@id/IdEdtGenero"
           app:layout_constraintStart_toStartOf="@id/IdEdtGenero"
           app:layout_constraintEnd_toEndOf="@id/IdEdtGenero"/>
@@ -154,6 +159,7 @@
           android:layout_width="0dp"
           android:layout_height="wrap_content"
           android:hint="Correo"
+          android:inputType="textEmailAddress"
           app:layout_constraintTop_toBottomOf="@id/IdEdtNumeroDocumento"
           app:layout_constraintStart_toStartOf="@id/IdEdtNumeroDocumento"
           app:layout_constraintEnd_toEndOf="@id/IdEdtNumeroDocumento"/>
@@ -175,6 +181,7 @@
           android:layout_width="0dp"
           android:layout_height="wrap_content"
           android:hint="Teléfono"
+          android:inputType="phone"
           app:layout_constraintTop_toBottomOf="@id/IdEdtCorreo"
           app:layout_constraintStart_toStartOf="@id/IdEdtCorreo"
           app:layout_constraintEnd_toEndOf="@id/IdEdtCorreo"/>
@@ -196,6 +203,7 @@
           android:layout_width="0dp"
           android:layout_height="wrap_content"
           android:hint="Ciudad"
+          android:inputType="textCapWords"
           app:layout_constraintTop_toBottomOf="@id/IdEdtTelefono"
           app:layout_constraintStart_toStartOf="@id/IdEdtTelefono"
           app:layout_constraintEnd_toEndOf="@id/IdEdtTelefono"/>
@@ -217,6 +225,7 @@
           android:layout_width="0dp"
           android:layout_height="wrap_content"
           android:hint="Profesión"
+          android:inputType="textCapWords"
           app:layout_constraintTop_toBottomOf="@id/IdEdtCiudad"
           app:layout_constraintStart_toStartOf="@id/IdEdtCiudad"
           app:layout_constraintEnd_toEndOf="@id/IdEdtCiudad"/>
@@ -238,6 +247,7 @@
           android:layout_width="0dp"
           android:layout_height="wrap_content"
           android:hint="Nivel de estudio"
+          android:inputType="textCapWords"
           app:layout_constraintTop_toBottomOf="@id/IdEdtProfesion"
           app:layout_constraintStart_toStartOf="@id/IdEdtProfesion"
           app:layout_constraintEnd_toEndOf="@id/IdEdtProfesion"/>
@@ -256,28 +266,26 @@
 
       <Button
           android:id="@+id/IdBtnEliminar"
-          android:layout_width="0dp"
+          android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:text="Eliminar"
+          android:textSize="14sp"
           app:layout_constraintTop_toBottomOf="@id/IdEdtNivelEstudio"
-          app:layout_constraintStart_toStartOf="@id/IdEdtNivelEstudio"
-          app:layout_constraintEnd_toStartOf="@id/IdBtnConsultar"
-          app:layout_constraintHorizontal_chainStyle="spread"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintHorizontal_chainStyle="spread_inside"
           android:layout_marginTop="32dp"
-          android:layout_marginStart="16dp"
-          android:layout_marginEnd="8dp"/>
+          android:layout_marginStart="24dp"/>
 
       <Button
           android:id="@+id/IdBtnConsultar"
-          android:layout_width="0dp"
+          android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:text="Consultar"
+          android:textSize="14sp"
           app:layout_constraintTop_toBottomOf="@id/IdEdtNivelEstudio"
-          app:layout_constraintStart_toEndOf="@id/IdBtnEliminar"
-          app:layout_constraintEnd_toEndOf="@id/IdEdtNivelEstudio"
+          app:layout_constraintEnd_toEndOf="parent"
           android:layout_marginTop="32dp"
-          android:layout_marginStart="8dp"
-          android:layout_marginEnd="16dp"/>
+          android:layout_marginEnd="24dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
   </androidx.core.widget.NestedScrollView>
